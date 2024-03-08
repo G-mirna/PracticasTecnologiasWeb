@@ -1,0 +1,51 @@
+//CREACION DE LA BASE DE DATOS//
+
+CREATE DATABASE UNIVOBD;
+
+
+//CREACION DE LA TABLA ESTUDIANTE//
+
+CREATE TABLE estudiante (
+    Id_estuidante INT PRIMARY KEY AUTO_INCREMENT,
+    Nombre_estudiante VARCHAR(80),
+    Edad_estudiante INT,
+    Carrera_estudiante VARCHAR(50)
+    );
+
+//INSERTAR DATO EN LA TABLA ESTUDIANTE//
+
+INSERT INTO estudiante VALUES (NULL,"Emely Valladares", 20 , "Ingenieria de Software");
+INSERT INTO estudiante VALUES (NULL,"Marisol Hernandez", 22 , "Licenciatura en Compuntación");
+INSERT INTO estudiante VALUES (NULL,"Sofia Ortiz", 20 , "Ingenieria de Software");
+
+//REALIZACION DE LAS DIFERENTE CONSULTAS//
+
+-Recupera todos los estudiantes en la tabla.
+SELECT *FROM estudiante;
+
+-Encuentra los estudiantes mayores de 20 años.
+SELECT *FROM estudiante WHERE Edad_estudiante > 20; 
+
+-Encuentra los estudiantes que estudian Ingeniería de Software.
+SELECT *FROM estudiante WHERE Carrera_estudiante = "Ingenieria de Software";
+
+-Muestra solo el nombre y la edad de los estudiantes.
+SELECT Nombre_estudiante, Edad_estudiante FROM estudiante;
+
+
+//ACTUALIZAR DATOS EN LA TABLA//
+
+- Actualiza la edad de uno de los estudiantes en la tabla.
+UPDATE estudiante SET Edad_estudiante = 23 WHERE Id_estudiante = 3;
+
+
+//ELIMINACION DE DATOS DE LA TABLA ESTUDIANTE//
+
+- Elimina uno de los estudiantes de la tabla.
+DELETE FROM estudiante WHERE Id_estudiante = 1;
+
+ 
+
+
+
+
